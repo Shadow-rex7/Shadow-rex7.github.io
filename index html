@@ -1,4 +1,62 @@
-<!DOCTYPE html>
+<!-- Add this in your <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Source+Serif+4:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1c2430;
+    --burgundy:#6e2a2f;
+    --gold:#a9803f;
+    --hairline:#c9bfa4;
+    --parchment:#f2ede0;
+  }
+
+  /* Classic serif headings */
+  .classic-heading{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    color:var(--ink);
+  }
+
+  /* Hairline section divider */
+  .classic-divider{
+    border:none;
+    border-top:1px solid var(--hairline);
+    margin:2.5rem 0;
+  }
+
+  /* Drop cap for article openings */
+  .classic-lede::first-letter{
+    font-family:'Cormorant Garamond', serif;
+    font-size:3.4rem;
+    font-weight:600;
+    float:left;
+    line-height:0.8;
+    padding:0.1rem 0.5rem 0 0;
+    color:var(--burgundy);
+  }
+
+  /* Pull quote */
+  .classic-quote{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:1.4rem;
+    color:var(--burgundy);
+    border-top:1px solid var(--hairline);
+    border-bottom:1px solid var(--hairline);
+    padding:1.2rem 0;
+    margin:2rem 0;
+  }
+
+  /* Numbered entry label (e.g. for portfolio items) */
+  .classic-code{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+</style><!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
