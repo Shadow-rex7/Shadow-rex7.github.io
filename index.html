@@ -1,138 +1,330 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Thoughts</title>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
-    background: #f8f9fa;
-    color: #1a1a1a;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  
-  header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    font-weight: 700;
-  }
-  
-  header p {
-    font-size: 1.1em;
-    opacity: 0.9;
-  }
-  
-  .container {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  
-  .post {
-    background: white;
-    border-radius: 8px;
-    padding: 40px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .post:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  }
-  
-  .post h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #667eea;
-  }
-  
-  .post-meta {
-    color: #888;
-    font-size: 0.95em;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 15px;
-  }
-  
-  .post img {
-    width: 100%;
-    border-radius: 8px;
-    margin: 25px 0;
-    display: block;
-  }
-  
-  .post p {
-    margin-bottom: 15px;
-    font-size: 1.05em;
-    color: #333;
-  }
-  
-  .post strong {
-    color: #667eea;
-    font-weight: 600;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 30px;
-    color: #888;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 60px;
-    font-size: 0.9em;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI-Generated Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 60px 20px;
+            animation: fadeInDown 1s ease-in;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .portfolio-section {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        
+        .portfolio-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-in;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .card-header h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .card-label {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #667eea;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .card-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .card-link:hover {
+            color: #764ba2;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .empty-state h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        
+        .empty-state p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #4caf50;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        
+        footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<header>
-  <h1>Tech Thoughts</h1>
-  <p>Exploring the technology shaping our future</p>
-</header>
-
-<div class="container">
-
-  <article class="post">
-    <h2>The Rise of AI Living Directly on Your Phone</h2>
-    <div class="post-meta">August 1, 2026</div>
-    <img src="images/photo1.jpg" alt="Code and technology">
+    <div class="container">
+        <header>
+            <h1>🚀 My AI Portfolio</h1>
+            <p>AI-Generated Portfolio Items Updated Weekly</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">
+                <span class="status-indicator"></span>Live & Auto-Updating
+            </p>
+            <a href="https://github.com/Shadow-rex7/Shadow-rex7.github.io" class="cta-button">View on GitHub</a>
+        </header>
+        
+        <section class="portfolio-section">
+            <h2 class="section-title">📁 Portfolio Items</h2>
+            
+            <div class="empty-state" id="loading-state">
+                <h3>Loading Portfolio Content...</h3>
+                <p>Your AI-generated portfolio items will appear here every Sunday.</p>
+                <p style="font-size: 0.95em; margin-top: 20px;">
+                    Check back after Sunday night UTC or view the <a href="content/" style="color: white; text-decoration: underline;">content folder</a> directly.
+                </p>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolio-container"></div>
+        </section>
+        
+        <section class="portfolio-section" style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 40px 20px;">
+            <h2 class="section-title">📊 How It Works</h2>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-header">
+                        <h3>⚙️ Automated</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>GitHub Actions runs automatically every Sunday night to generate fresh portfolio content using AI.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-header">
+                        <h3>🤖 AI-Powered</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>OpenAI generates diverse portfolio items including projects, case studies, skills, and services.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="card-header">
+                        <h3>📱 Multi-Format</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Content is generated in both HTML and Markdown formats for maximum flexibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>🤖 Powered by AI | 📅 Updated Weekly | 🔄 Auto-Deployed via GitHub Actions</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.7;">Last updated: <span id="timestamp">Loading...</span></p>
+        </footer>
+    </div>
     
-    <p>For years, AI features on phones — like voice assistants or photo enhancement — worked by sending your data to a cloud server, processing it there, and sending back a result. That's changing fast.</p>
-    
-    <p>Modern phones now pack dedicated AI chips (called <strong>NPUs — Neural Processing Units</strong>) that can run surprisingly capable AI models directly on the device. No internet connection needed, no data leaving your phone.</p>
-    
-    <p>This matters for three big reasons: <strong>privacy</strong> (your data stays local), <strong>speed</strong> (no network lag), and <strong>offline access</strong> (works without signal). Companies are now racing to shrink powerful AI models small enough to fit on a chip the size of a fingernail — without losing much capability.</p>
-    
-    <p>It's a quiet shift, but one that's reshaping how phones are designed from the inside out.</p>
-  </article>
-
-  <article class="post">
-    <h2>My First Post</h2>
-    <div class="post-meta">August 1, 2026</div>
-    <p>This is my first blog post. I'm learning to build my own website using Termux and GitHub Pages!</p>
-    <p>No servers, no backend to manage — just HTML, Git, and some simple CSS. It's amazing how accessible web development has become.</p>
-  </article>
-
-</div>
-
-<footer>
-  <p>© 2026 Tech Thoughts. Built with HTML, CSS, and curiosity.</p>
-</footer>
-
+    <script>
+        // Load portfolio items from content folder
+        async function loadPortfolioItems() {
+            try {
+                // Try to fetch the content directory listing
+                const response = await fetch('content/');
+                
+                if (!response.ok) {
+                    console.log('Content folder not yet populated');
+                    return;
+                }
+                
+                // Since we can't directly list files, we'll show a message
+                const loadingState = document.getElementById('loading-state');
+                const container = document.getElementById('portfolio-container');
+                
+                loadingState.innerHTML = `
+                    <h3>✨ Portfolio Generated!</h3>
+                    <p>Your AI-generated portfolio items are stored in the <code style="background: rgba(0,0,0,0.2); padding: 5px 10px; border-radius: 5px;">content/</code> folder.</p>
+                    <p style="font-size: 0.95em; margin-top: 20px;">
+                        <a href="content/" style="color: white; text-decoration: underline; font-weight: bold;">View Content →</a>
+                    </p>
+                `;
+                
+                // Update timestamp
+                const now = new Date();
+                document.getElementById('timestamp').textContent = now.toLocaleString();
+                
+            } catch (error) {
+                console.log('Portfolio items will appear after first generation');
+            }
+        }
+        
+        // Load items on page load
+        window.addEventListener('load', loadPortfolioItems);
+        
+        // Set current timestamp
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
 </body>
 </html>
